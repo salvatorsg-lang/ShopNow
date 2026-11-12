@@ -1,4 +1,4 @@
-/* J's Garage Sale — Apple-style: clean, big type, soft cards, lots of air. */
+/* J's Garage Sale — clean, quiet, professional. */
 
 * { box-sizing: border-box; }
 
@@ -16,82 +16,47 @@ body {
 a { color: #0066cc; text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-/* Header — white, huge type, like a product page hero. */
+/* Header — compact, one line of identity. */
 header {
   background: #fff;
   text-align: center;
-  padding: 4rem 1.25rem 3rem;
+  padding: 2.25rem 1.25rem 1.75rem;
+  border-bottom: 1px solid #e8e8ed;
 }
 
 header h1 {
-  margin: 0 0 0.75rem;
-  font-size: 3rem;
+  margin: 0 0 0.35rem;
+  font-size: 2rem;
   font-weight: 700;
   letter-spacing: -0.02em;
-  line-height: 1.1;
+  line-height: 1.15;
 }
 
 .tagline {
   margin: 0;
   color: #6e6e73;
-  font-size: 1.25rem;
-  font-weight: 400;
+  font-size: 1rem;
 }
 
-main { max-width: 980px; margin: 0 auto; padding: 2rem 1.25rem 3rem; }
+main { max-width: 980px; margin: 0 auto; padding: 1.5rem 1.25rem 2.5rem; }
 
-/* Hero — black product banner, Apple style. */
-.hero {
-  background: #000;
-  color: #f5f5f7;
-  text-align: center;
-  padding: 4rem 1.25rem 3rem;
-}
-
-.hero h2 {
-  margin: 0 0 0.5rem;
-  font-size: 3.5rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1.05;
-  color: #fff;
-}
-
-.hero-sub {
-  margin: 0 0 2rem;
-  font-size: 1.35rem;
-  color: #a1a1a6;
-}
-
-.hero img {
-  width: 100%;
-  max-width: 720px;
-  display: block;
-  margin: 0 auto 2rem;
-  border-radius: 18px;
-}
-
-.hero-price {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #fff;
-  margin: 0 0 1.25rem;
-}
-
-.hero .button { font-size: 1.05rem; }
-
-/* Index — clean list rows with chevrons, Apple Store style. */
-.index {
+/* Cards — thin border, barely-there shadow. */
+.index, .item, .item-mini, .how {
   background: #fff;
-  border-radius: 18px;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
-  padding: 1.5rem 1.75rem;
-  margin-bottom: 2rem;
+  border: 1px solid #e8e8ed;
+  border-radius: 16px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+/* Index — compact jump list. */
+.index {
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.25rem;
 }
 
 .index h2 {
-  margin: 0 0 0.5rem;
-  font-size: 1.5rem;
+  margin: 0 0 0.25rem;
+  font-size: 1.25rem;
   font-weight: 700;
   letter-spacing: -0.02em;
 }
@@ -101,37 +66,21 @@ main { max-width: 980px; margin: 0 auto; padding: 2rem 1.25rem 3rem; }
 .index li {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
   gap: 1rem;
-  padding: 0.9rem 0;
+  padding: 0.7rem 0;
   border-bottom: 1px solid #f0f0f0;
 }
 
 .index li:last-child { border-bottom: none; }
 
-.index li a {
-  color: #1d1d1f;
-  font-size: 1.05rem;
-}
-
+.index li a { color: #1d1d1f; font-size: 1rem; }
 .index li a:hover { color: #0066cc; text-decoration: none; }
-
-.index li a::after {
-  content: "›";
-  color: #86868b;
-  margin-left: 0.5rem;
-}
-
+.index li a::after { content: "›"; color: #86868b; margin-left: 0.4rem; }
 .index li span { font-weight: 600; white-space: nowrap; }
 
-/* Featured item — big white card. */
-.item {
-  background: #fff;
-  border-radius: 18px;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
-  overflow: hidden;
-  margin-bottom: 1.5rem;
-}
+/* Featured item. */
+.item { overflow: hidden; margin-bottom: 1.25rem; }
 
 .photos {
   display: grid;
@@ -141,52 +90,48 @@ main { max-width: 980px; margin: 0 auto; padding: 2rem 1.25rem 3rem; }
   background: #fff;
 }
 
+.photos.four { grid-template-columns: 1fr 1fr; }
+
 .photos img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
   aspect-ratio: 4 / 3;
-  border-radius: 12px;
+  border-radius: 10px;
 }
 
-.details { padding: 2rem 2rem 2.25rem; }
+.details { padding: 1.5rem 1.75rem 1.75rem; }
 
 .details h2 {
-  margin: 0 0 0.5rem;
-  font-size: 1.75rem;
+  margin: 0 0 0.4rem;
+  font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: -0.02em;
-  line-height: 1.2;
+  line-height: 1.25;
 }
 
 .price {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: -0.02em;
-  margin: 0.25rem 0;
+  margin: 0.2rem 0;
 }
 
 .condition { color: #6e6e73; margin-top: 0; }
 
-.details p { font-size: 1.05rem; color: #333336; }
+.details p { font-size: 1rem; color: #333336; }
 
 video {
   width: 100%;
   max-width: 520px;
   display: block;
-  margin: 1.5rem 0;
-  border-radius: 18px;
+  margin: 1.25rem 0;
+  border-radius: 12px;
   background: #000;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
 }
 
-.details h3 {
-  margin: 1.5rem 0 0.25rem;
-  font-size: 1.15rem;
-  letter-spacing: -0.01em;
-}
-
+.details h3 { margin: 1.25rem 0 0.25rem; font-size: 1.1rem; letter-spacing: -0.01em; }
 .details ul { margin-top: 0.25rem; color: #333336; }
 
 .deal { font-weight: 600; color: #1d1d1f; }
@@ -198,69 +143,57 @@ video {
   color: #fff;
   text-decoration: none;
   font-weight: 600;
-  font-size: 1.05rem;
-  padding: 0.75rem 1.75rem;
+  font-size: 1rem;
+  padding: 0.65rem 1.5rem;
   border-radius: 980px;
 }
 
 .button:hover { background: #0077ed; text-decoration: none; }
 
-/* Smaller items — cards that lift on hover. */
-.item-mini {
-  background: #fff;
-  border-radius: 18px;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
-  padding: 1.5rem 1.75rem;
-  margin-top: 1.25rem;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+/* Smaller items — two-column grid. */
+.minis {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
 }
 
-.item-mini:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-}
+.item-mini { padding: 1.25rem 1.5rem; }
 
 .item-mini h2 {
   margin: 0 0 0.25rem;
-  font-size: 1.35rem;
+  font-size: 1.15rem;
   font-weight: 700;
   letter-spacing: -0.02em;
+  line-height: 1.3;
 }
 
-.item-mini .price { font-size: 1.4rem; }
-.item-mini p { color: #333336; }
+.item-mini .price { font-size: 1.25rem; margin: 0.15rem 0 0.4rem; }
+.item-mini p { color: #333336; margin: 0.35rem 0; }
+.item-mini p:last-child { margin-bottom: 0; }
 
 /* How to buy. */
-.how {
-  background: #fff;
-  border-radius: 18px;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
-  padding: 1.5rem 1.75rem;
-  margin-top: 1.5rem;
-}
+.how { padding: 1.25rem 1.5rem; margin-top: 1.25rem; }
 
-.how h2 {
-  margin-top: 0;
-  font-size: 1.5rem;
-  letter-spacing: -0.02em;
-}
-
-.how ol { color: #333336; }
-.how li { margin-bottom: 0.35rem; }
+.how h2 { margin-top: 0; font-size: 1.25rem; letter-spacing: -0.02em; }
+.how ol { color: #333336; margin-bottom: 0.5rem; }
+.how li { margin-bottom: 0.3rem; }
+.how p:last-child { margin-bottom: 0; }
 
 footer {
   text-align: center;
   color: #86868b;
   font-size: 0.85rem;
-  padding: 1.5rem 1rem 2.5rem;
+  padding: 1.25rem 1rem 2rem;
 }
 
 @media (max-width: 640px) {
-  header { padding: 3rem 1.25rem 2.25rem; }
-  header h1 { font-size: 2.1rem; }
-  .tagline { font-size: 1.05rem; }
+  header { padding: 1.75rem 1.25rem 1.5rem; }
+  header h1 { font-size: 1.6rem; }
+  .tagline { font-size: 0.95rem; }
   .photos { grid-template-columns: 1fr; }
+  .photos.four { grid-template-columns: 1fr; }
   .photos img { aspect-ratio: 16 / 10; }
-  .details { padding: 1.5rem; }
-  .index, .item-mini, .how { padding: 1.25rem; }
+  .details { padding: 1.25rem; }
+  .index, .item-mini, .how { padding: 1.1rem 1.25rem; }
+  .minis { grid-template-columns: 1fr; gap: 1rem; }
 }
