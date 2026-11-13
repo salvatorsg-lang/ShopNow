@@ -41,7 +41,7 @@ header h1 {
 main { max-width: 980px; margin: 0 auto; padding: 1.5rem 1.25rem 2.5rem; }
 
 /* Cards — thin border, barely-there shadow. */
-.index, .item, .item-mini, .how {
+.index, .item, .item-mini, .how, .faq {
   background: #fff;
   border: 1px solid #e8e8ed;
   border-radius: 16px;
@@ -179,6 +179,14 @@ video {
 .how li { margin-bottom: 0.3rem; }
 .how p:last-child { margin-bottom: 0; }
 
+/* FAQ. */
+.faq { padding: 1.25rem 1.5rem; margin-top: 1.25rem; }
+
+.faq h2 { margin-top: 0; font-size: 1.25rem; letter-spacing: -0.02em; }
+.faq h3 { margin: 1rem 0 0.2rem; font-size: 1.05rem; letter-spacing: -0.01em; }
+.faq h3:first-of-type { margin-top: 0.5rem; }
+.faq p { color: #333336; margin: 0.2rem 0; }
+
 footer {
   text-align: center;
   color: #86868b;
@@ -194,6 +202,6 @@ footer {
   .photos.four { grid-template-columns: 1fr; }
   .photos img { aspect-ratio: 16 / 10; }
   .details { padding: 1.25rem; }
-  .index, .item-mini, .how { padding: 1.1rem 1.25rem; }
+  .index, .item-mini, .how, .faq { padding: 1.1rem 1.25rem; }
   .minis { grid-template-columns: 1fr; gap: 1rem; }
 }
